@@ -11,12 +11,12 @@ ul {
 }
 a {
   color: #ccc;
-  rubyt-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
   color: #ececec;
-  rubyt-decoration: underline;
+  text-decoration: underline;
 }
 
 #main {
@@ -70,5 +70,5 @@ ul.entries a:hover {
 
 footer {
   font-size: 0.65em;
-  rubyt-align: center;
+  text-align: center;
 }

@@ -1,12 +1,61 @@
 ---
-layout: default
-title: 我的Blog
+layout: moment
+title: Moment
 ---
 
-<h2>{{ page.title }}</h2>
-<p>最新文章</p>
-<ul>
-{% for post in site.posts %}
-<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-{% endfor %}
-</ul>
+<div id="app" class="newbbs">
+    <div id="newbbsPage" class="page-wrap ipage">
+      <div class="ipage-panel active-panel">
+        <div id="newbbsTab" class="tab-box">
+          <div class="tab-nav">
+            <div class="nav-btn btn-active" data-tab="#tab-lucky"><i class="icon-gift"></i>抽奖</div>
+            <div class="nav-btn" data-tab="#tab-groupon"><i class="icon-cart"></i>团购</div>
+            <!-- <div class="nav-btn" data-tab="#tab-usualsite">二手</div> -->
+          </div>
+          <div class="tab-content">
+            <div id="tab-lucky" class="tab-item item-active">
+              <div id="luckyBox-wrap" class="luckyBox">
+                <div class="luckyBox-header">
+                  <h3 class="luckyBox-title">抽奖</h3>
+                  <div id="addLuckyBtn" class="go-btn" data-target="#page-addForm"><i class="icon-plus"></i></div>
+                </div>
+                <div class="luckyBox-main">
+                  <div class="task-list">
+                    <div class="task-item">
+                      <a href=""><h4 class="item-title">寻侠2周年庆典，就是要2，本帖支持水到底！</h4></a>
+                    </div>
+                    <div class="task-item">
+                      <a href=""><h4 class="item-title">QQ浏览器“请你喝茶”体验全新7.4版有惊喜</h4></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="tab-groupon" class="tab-item">2</div>
+          </div>
+        </div>
+      </div>
+      <div id="page-addForm" class="ipage-panel">
+        <div class="panel-header">
+          <h3 class="panel-title">添加任务</h3>
+          <div class="back-btn"><i class="icon-undo"></i></div>
+        </div>
+        <div id="addForm-wrap">
+          <form class="addForm">
+            <div class="input-text">
+              <input type="text" placeholder="网址" name="luckyUrl">
+            </div>
+            <div class="input-text">
+              <input type="text" placeholder="发帖内容" name="luckyText">
+            </div>
+            <div class="input-text">
+              <input type="text" placeholder="中奖楼层" name="luckyFloor">
+            </div>
+            <div class="input-text">
+              <div id="submit-addForm" class="btn submit-btn">添加</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div><!-- newbbsPage END -->
+  </div>
